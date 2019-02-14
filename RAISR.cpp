@@ -1,4 +1,4 @@
-#include <algorithm>
+﻿#include <algorithm>
 #include <assert.h>
 #include <ctime>
 #include <fstream>
@@ -155,7 +155,7 @@ void RAISR::train() {
  */
 void RAISR::test(bool downScale, vector<Mat> &imageMatList, vector<Mat> & downScaledImageList, vector<Mat>& RAISRImageList, vector<Mat> &cheapScaledImageList, string CTBlendingType) {
 
-    if (not trained){
+    if (! trained){
         cout << "you must train the model before test the model"<<endl;
         exit(EXIT_FAILURE);
     }
@@ -251,7 +251,7 @@ void RAISR::test(bool downScale, vector<Mat> &imageMatList, vector<Mat> & downSc
                     // Census transform
                     for (int i = 0 ; i < margin; i++){
                         for (int j = 0 ; j < margin ; j++){
-                            if (i == 1 and j == 1) continue;
+                            if (i == 1 && j == 1) continue;
                             LRPatch.at<double>(i,j) = LRPatch.at<double>(i,j) > LRPatch.at<double>(1,1) ? 1.0:0.0;
                             HRPatch.at<double>(i,j) = HRPatch.at<double>(i,j) > HRPatch.at<double>(1,1) ? 1.0:0.0;
                         }
@@ -311,7 +311,7 @@ void RAISR::testPrivateModuleMethod() {
 
 }
 
-void RAISR::writeOutFilter(string& outPath){
+void RAISR::writeOutFilter(string outPath){
     if (!trained ){
         cout<< "model is not trained, you cannot serialize current filter" << endl;
         exit(-1);

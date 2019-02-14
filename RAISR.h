@@ -1,4 +1,4 @@
-#ifndef RAISR_RAISR_H
+﻿#ifndef RAISR_RAISR_H
 #define RAISR_RAISR_H
 
 #include "HashBuckets.h"
@@ -49,7 +49,7 @@ public:
             std::string CTBlendingType
     );
     void testPrivateModuleMethod();
-    void writeOutFilter(std::string& outPath);
+    void writeOutFilter(std::string outPath);
     void readInFilter(std::string& inPath);
 private:
     bool trained; // flag indicating whether model is trained or not

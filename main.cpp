@@ -1,11 +1,8 @@
-#include "opencv2/opencv.hpp"
-#include "opencv2/highgui/highgui.hpp"
-#include "RAISR.h"
-#include <vector>
-#include <iostream>
+﻿#include "raisrwidget.hpp"
 
-using namespace cv;
-using namespace std;
+#include <QApplication>
+
+
 
 //void foo(Mat img, int r, int c, bool mirror, int rot, int patchLen=5) {
 //    if (mirror) {
@@ -42,7 +39,12 @@ using namespace std;
 
 
 int main(int argc, char** argv) {
+    QApplication a(argc, argv);
+    RAISRWidget w;
+    w.show();
+    return a.exec();
 
+    /*
     string dirPath = "./train_images";
     string outPath = "./result_images";
     string filterPath = "./filters";
@@ -76,6 +78,6 @@ int main(int argc, char** argv) {
         imwrite(currentOutPath, downScaledImageList[i]);
 
     }
-
+*/
 
 }

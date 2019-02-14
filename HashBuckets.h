@@ -1,7 +1,9 @@
-#ifndef TEST_HASHBUCKETS_H
+﻿#ifndef TEST_HASHBUCKETS_H
 #define TEST_HASHBUCKETS_H
 
-#include "Utils.h"
+// #include "Utils.h"
+#include <opencv2/opencv.hpp>
+#include <opencv2/core.hpp>
 #include <stdexcept>
 
 class HashBuckets {

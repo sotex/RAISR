@@ -1,6 +1,6 @@
-#include <dirent.h>
+﻿// #include <dirent.h>
 #include "Utils.h"
-#include <sys/stat.h>
+// #include <sys/stat.h>
 
 
 using namespace std;
@@ -55,6 +55,7 @@ bool matIsEqual(const cv::Mat mat1, const cv::Mat mat2) {
 }
 
 void readListOfImage(string& dirPath, vector<Mat>& imageMatList, vector<string>& imageNameList) {
+    /*
     DIR *dir;
     struct dirent *entry;
     string filePath;
@@ -86,5 +87,5 @@ void readListOfImage(string& dirPath, vector<Mat>& imageMatList, vector<string>&
         cout << "Error opening directory" << endl;
         exit (EXIT_FAILURE);
     }
-
+    */
 }
